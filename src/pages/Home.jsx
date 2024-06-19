@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";  
 import  Island  from "../models/Island";
+import Sky from "../models/Sky";
 
 const Home = () => {
   const adjustIslandForScreenSize = () => {
@@ -35,7 +36,8 @@ const Home = () => {
           {/* <spotLight />
           spotLight is similar to pointlight but in the shape of a cone so I won't be needing it as well */}
           <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
-
+          
+          <Sky/>
           <Island
             position={islandPosition}
             scale={islandScale}
