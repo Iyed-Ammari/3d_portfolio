@@ -28,12 +28,13 @@ const Home = () => {
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
-          <directionalLight />
-          <ambientLight />
-          <pointLight />
-          <spotLight />
-          <hemisphereLight />
-          <hemisphereLight />
+          <directionalLight position={[1,1,1]} intensity={2} />
+          <ambientLight intensity={0.5} />
+          {/* <pointLight /> 
+           I removed the pointlight because we're outside and we have the sun (the directional light and the ambient light) */}
+          {/* <spotLight />
+          spotLight is similar to pointlight but in the shape of a cone so I won't be needing it as well */}
+          <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
 
           <Island
             position={islandPosition}
