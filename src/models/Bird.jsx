@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 const Bird = () => {
     const { scene, animations } = useGLTF(birdScene);
   return (
-    <mesh position={[0.5, -0.5, 1]} scale={[0.003, 0.003, 0.003]}>
+    <mesh position={[-1, 0.5, 1]} scale={[0.003, 0.003, 0.003]}>
       <primitive object={scene} />
     </mesh>
   );
