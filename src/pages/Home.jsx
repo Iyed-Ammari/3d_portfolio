@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
 import Island from "../models/Island";
@@ -8,7 +8,11 @@ import Plane from "../models/Plane";
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
-  const [setCurrentStage, setSetCurrentStage] = useState(1)
+  useEffect(() => {
+    console.log("isRotating = ", isRotating);
+  }, [isRotating])
+
+  const [currentStage, setCurrentStage] = useState(1)
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
     let screenPosition = [0, -6.5, -43];

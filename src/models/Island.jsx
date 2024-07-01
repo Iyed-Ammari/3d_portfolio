@@ -39,6 +39,7 @@ export function Island({
     event.stopPropagation();
     event.preventDefault();
     setIsRotating(true);
+    // console.log("isRotating = ", isRotating);
 
     // Calculate the clientX based on whether it's a touch event or a mouse event
     const clientX = event.touches ? event.touches[0].clientX : event.clientX;
@@ -52,6 +53,7 @@ export function Island({
     event.stopPropagation();
     event.preventDefault();
     setIsRotating(false);
+    // console.log("isRotating = ", isRotating);
   };
 
   // Handle pointer (mouse or touch) move event
@@ -81,11 +83,13 @@ export function Island({
   const handleKeyDown = (event) => {
     if (event.key === "ArrowLeft") {
       if (!isRotating) setIsRotating(true);
+      // console.log("isRotating = ", isRotating);
 
       islandRef.current.rotation.y += 0.005 * Math.PI;
       rotationSpeed.current = 0.007;
     } else if (event.key === "ArrowRight") {
       if (!isRotating) setIsRotating(true);
+      // console.log("isRotating = ", isRotating);
 
       islandRef.current.rotation.y -= 0.005 * Math.PI;
       rotationSpeed.current = -0.007;
@@ -96,6 +100,7 @@ export function Island({
   const handleKeyUp = (event) => {
     if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
       setIsRotating(false);
+      // console.log("isRotating = ", isRotating);
     }
   };
 
@@ -104,6 +109,7 @@ export function Island({
     e.stopPropagation();
     e.preventDefault();
     setIsRotating(true);
+    // console.log("isRotating = ", isRotating);
 
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     lastX.current = clientX;
@@ -113,6 +119,7 @@ export function Island({
     e.stopPropagation();
     e.preventDefault();
     setIsRotating(false);
+    // console.log("isRotating = ", isRotating);
   };
 
   const handleTouchMove = (e) => {
