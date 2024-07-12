@@ -38,7 +38,7 @@ useFrame(({ clock, camera }) => {
       );
   }
   if (birdRef.current.position.x < camera.position.x - 10) {
-    console.log('eeeee')
+    
       // Change direction to forward and reset the bird's rotation
     birdRef.current.rotation.y = 0;
     }
