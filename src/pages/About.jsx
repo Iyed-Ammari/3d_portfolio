@@ -20,7 +20,7 @@ const About = () => {
       </h1>
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Front-end Engineer based in Tunisia <span> &#127481;&#127475;</span>,
+          Front-end Engineer based in Tunisia ,
           specializing in React
         </p>
       </div>
